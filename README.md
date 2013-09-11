@@ -9,29 +9,27 @@ Usage
 
 Create a model class and inherit from LiteRecord
 
->class Car extends LiteRecord {
->	
->	# lite_record works by assuming a convention that all protected fields are meant to persist.	
->	# year and model will map to data mysql table fields
->	
->	protected $model;
->
->	protected $year;
->
->	# specify basic associations with an associative array
->
->	# supports has_many, has_one, belongs_to, has_many_through
->
->	$array = array(
->
->   	array("association_type"=>"has_many", 'model_name'=>'Wheel'),
->
->       array("association_type"=>"has_one", 'model_name'=>'SteeringWheel')    
->                 
-> 	);
->
->}
+```
+class Car extends LiteRecord {
+	
+	# lite_record works by assuming a convention that all protected fields are meant to persist.	
+	# year and model will map to data mysql table fields
+	
+	protected $model;
+	protected $year;
 
+	# specify basic associations with an associative array
+	# supports has_many, has_one, belongs_to, has_many_through
+
+	$array = array(
+
+   	    array("association_type"=>"has_many", 'model_name'=>'Wheel'),
+        array("association_type"=>"has_one", 'model_name'=>'SteeringWheel')    
+                 
+ 	);
+
+}
+```
 
 ### save data
 $car = new Car($mysqli);
