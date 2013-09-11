@@ -15,14 +15,19 @@ Create a model class and inherit from LiteRecord
 >	# year and model will map to data mysql table fields
 >	
 >	protected $model;
+>
 >	protected $year;
 >
 >	# specify basic associations with an associative array
+>
 >	# supports has_many, has_one, belongs_to, has_many_through
 >
 >	$array = array(
+>
 >   	array("association_type"=>"has_many", 'model_name'=>'Wheel'),
->       array("association_type"=>"has_one", 'model_name'=>'SteeringWheel')                     
+>
+>       array("association_type"=>"has_one", 'model_name'=>'SteeringWheel')    
+>                 
 > 	);
 >
 >}
